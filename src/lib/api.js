@@ -47,17 +47,17 @@ export async function getHealth() {
 
 // GET /api/bacalla — retorna el llistat complet de varietats
 export async function getBacallaList() {
-  return request("/api/mascotas", { method: "GET" });
+  return request("/api/bacalla", { method: "GET" });
 }
 
 // GET /api/bacalla/:id — retorna el detall d'una varietat per id
 export async function getBacallaById(id) {
-  return request(`/api/mascotas/${id}`, { method: "GET" });
+  return request(`/api/bacalla/${id}`, { method: "GET" });
 }
 
 // POST /api/bacalla — crea una nova varietat amb les dades del formulari
 export async function createBacalla(data) {
-  return request("/api/mascotas", {
+  return request("/api/bacalla", {
     method: "POST",
     body: JSON.stringify(data),
   });
@@ -65,7 +65,7 @@ export async function createBacalla(data) {
 
 // PUT /api/bacalla/:id — actualitza una varietat existent
 export async function updateBacalla(id, data) {
-  return request(`/api/mascotas/${id}`, {
+  return request(`/api/bacalla/${id}`, {
     method: "PUT",
     body: JSON.stringify(data),
   });
@@ -73,5 +73,5 @@ export async function updateBacalla(id, data) {
 
 // DELETE /api/bacalla/:id — elimina una varietat per id
 export async function deleteBacalla(id) {
-  return request(`/api/mascotas/${id}`, { method: "DELETE" });
+  return request(`/api/bacalla/${id}`, { method: "DELETE" });
 }
